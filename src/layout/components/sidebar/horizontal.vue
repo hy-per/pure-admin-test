@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import Search from "../search/index.vue";
-import Notice from "../notice/index.vue";
-import SidebarItem from "./sidebarItem.vue";
-import { isAllEmpty } from "@pureadmin/utils";
-import { ref, nextTick, computed } from "vue";
-import { useNav } from "@/layout/hooks/useNav";
-import { usePermissionStoreHook } from "@/store/modules/permission";
-import LogoutCircleRLine from "@iconify-icons/ri/logout-circle-r-line";
-import Setting from "@iconify-icons/ri/settings-3-line";
+import Search from '../search/index.vue'
+import Notice from '../notice/index.vue'
+import SidebarItem from './sidebarItem.vue'
+import { isAllEmpty } from '@pureadmin/utils'
+import { ref, nextTick, computed } from 'vue'
+import { useNav } from '@/layout/hooks/useNav'
+import { usePermissionStoreHook } from '@/store/modules/permission'
+import LogoutCircleRLine from '@iconify-icons/ri/logout-circle-r-line'
+import Setting from '@iconify-icons/ri/settings-3-line'
 
-const menuRef = ref();
+const menuRef = ref()
 
 const {
   route,
@@ -20,15 +20,15 @@ const {
   username,
   userAvatar,
   avatarsStyle
-} = useNav();
+} = useNav()
 
 const defaultActive = computed(() =>
   !isAllEmpty(route.meta?.activePath) ? route.meta.activePath : route.path
-);
+)
 
 nextTick(() => {
-  menuRef.value?.handleResize();
-});
+  menuRef.value?.handleResize()
+})
 </script>
 
 <template>

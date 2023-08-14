@@ -1,17 +1,13 @@
-<script setup lang="ts">
-import { type CSSProperties, computed } from "vue";
-import { hasAuth, getAuths } from "@/router/utils";
-
-defineOptions({
-  name: "PermissionButton"
-});
+<script setup lang="ts" name="PermissionButton">
+import { type CSSProperties, computed } from 'vue'
+import { hasAuth, getAuths } from '@/router/utils'
 
 const elStyle = computed((): CSSProperties => {
   return {
-    width: "85vw",
-    justifyContent: "start"
-  };
-});
+    width: '85vw',
+    justifyContent: 'start'
+  }
+})
 </script>
 
 <template>

@@ -1,12 +1,8 @@
-<script setup lang="ts">
-import { useRouter } from "vue-router";
-import noAccess from "@/assets/status/403.svg?component";
+<script setup lang="ts" name="403">
+import { useRouter } from 'vue-router'
+import noAccess from '@/assets/status/403.svg?component'
 
-defineOptions({
-  name: "403"
-});
-
-const router = useRouter();
+const router = useRouter()
 </script>
 
 <template>
